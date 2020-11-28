@@ -40,7 +40,8 @@ jobs:
           git clone $REPO out -b $TARGET_BRANCH
           cd out
 
-          echo "Moved files"
+          echo "Move files"
+          rm -r !(.gitignore)
           mv ../dist/* ./
           echo "todo.tarren.moe" > CNAME
 
