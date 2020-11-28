@@ -22,9 +22,6 @@ jobs:
       - name: Generate Page
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
-          COMMIT_MSG: |
-            <a commit message>
-            skip-checks: true
         run: |
           set -e
           set -o pipefail
