@@ -1,0 +1,133 @@
+:root {
+	font-family: monospace, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 20pt;
+	--text: PaleVioletRed;
+	--bg: LavenderBlush;
+	--main: #ffb6c180;
+}
+
+.dark {
+	--bg: #201518;
+	--text: LightCoral;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	color: var(--text);
+	transition: linear 0.1s;
+}
+
+body {
+	background: var(--bg);
+}
+
+body,
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+main {
+	text-align: center;
+	width: 100%;
+	max-width: 100vh;
+	min-height: 80vh;
+	margin: auto;
+	background: var(--main);
+	padding: 0.5rem;
+	position: relative;
+}
+
+input,
+button {
+	display: block;
+	width: 100%;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	font-size: 1rem;
+	border: var(--text) solid 2pt;
+	border-radius: 1em;
+	background: var(--bg);
+	outline: 0;
+	margin: auto;
+}
+
+input {
+	margin-bottom: 1rem;
+}
+
+::placeholder {
+	color: currentColor;
+	opacity: 60%;
+}
+
+input:focus,
+input:hover,
+button:focus,
+button:hover {
+	border-color: lightblue;
+}
+
+button {
+	width: auto;
+	display: inline;
+	margin: 0.5em;
+}
+
+.todo {
+	cursor: pointer;
+	text-align: left;
+	/* padding: 1rem; */
+	position: relative;
+	margin: 1rem;
+	width: 100%;
+}
+
+.todo h3 {
+	display: inline;
+}
+
+.todo button {
+	position: absolute;
+	right: 1rem;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+footer {
+	border-top: var(--text) solid 2pt;
+	/* position: absolute; */
+	/* bottom: 0; */
+	width: 100%;
+	background: var(--bg);
+}
+
+footer ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+	opacity: 60%;
+}
+
+a:hover {
+	opacity: 100%;
+}
