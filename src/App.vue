@@ -1,15 +1,16 @@
 <template>
 	<main>
-		<h1>Todo app</h1>
+		<h1>Todo</h1>
 		<form @submit.prevent="addTodo">
-			<input type="text" placeholder="New todo item" v-model="newTodo" name="newTodo" />
+			<textarea type="text" placeholder="New todo item" v-model="newTodo" name="newTodo" />
 			<input type="submit" value="Add new todo" />
 		</form>
 		<button @click="markAllDone">Mark all done</button>
 		<button @click="clearTodos">Clear all todos</button>
 		<ul>
-			<li v-for="todo in todos" :key="todo.id" class="todo">
+			<li v-for="(todo, index) in todos" :key="todo.id" class="todo">
 				<h3 :class="{ done: todo.done }" @click="toggleDone(todo)">{{ todo.task }}</h3>
+				<br />
 				<button @click="removeTodo(index)">Remove</button>
 			</li>
 		</ul>

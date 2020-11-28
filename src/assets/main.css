@@ -2,7 +2,7 @@
 	font-family: monospace, Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
-	font-size: 20pt;
+	font-size: 18pt;
 	--text: PaleVioletRed;
 	--bg: LavenderBlush;
 	--main: #ffb6c180;
@@ -51,6 +51,7 @@ main {
 }
 
 input,
+textarea,
 button {
 	display: block;
 	width: 100%;
@@ -63,7 +64,8 @@ button {
 	margin: auto;
 }
 
-input {
+input,
+textarea {
 	margin-bottom: 1rem;
 }
 
@@ -75,7 +77,9 @@ input {
 input:focus,
 input:hover,
 button:focus,
-button:hover {
+button:hover,
+textarea:focus,
+textarea:hover {
 	border-color: lightblue;
 }
 
@@ -85,21 +89,26 @@ button {
 	margin: 0.5em;
 }
 
+main ul {
+	list-style: none;
+}
+
 .todo {
 	cursor: pointer;
 	text-align: left;
 	position: relative;
-	margin: 1rem;
+	margin: 2em 0;
 	width: 100%;
+	border-bottom: var(--text) solid 2pt;
 }
 
 .todo h3 {
 	display: inline;
 }
 
-.todo button {
-	position: absolute;
-	right: 1rem;
+.todo h3::before {
+	content: '• ';
+	color: currentColor;
 }
 
 .done {
