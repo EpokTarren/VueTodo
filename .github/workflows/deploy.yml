@@ -41,7 +41,7 @@ jobs:
           cd out
 
           echo "Move files"
-          rm -r !\(.gitignore\) 2> /dev/null
+          rm -r !\(.gitignore|.git\) 2> /dev/null || true
           mv ../dist/* ./
           echo "todo.tarren.moe" > CNAME
 
